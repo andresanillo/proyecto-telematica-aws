@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS telematica CHARACTER SET utf8mb4;
+USE telematica;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id        INT AUTO_INCREMENT PRIMARY KEY,
+    nombre    VARCHAR(60)  NOT NULL,
+    apellido  VARCHAR(60)  NOT NULL,
+    cedula    VARCHAR(20)  NOT NULL UNIQUE,
+    telefono  VARCHAR(20)  NOT NULL,
+    carrera   VARCHAR(80)  NOT NULL,
+    creado    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
